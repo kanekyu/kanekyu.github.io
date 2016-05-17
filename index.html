@@ -2,7 +2,19 @@
 <html>
 <head>
 
-<script src='https://code.jquery.com/jquery-1.12.3.min.js'></script>
+<script src='https://code.jquery.com/jquery-1.12.3.min.js'>
+    function addPtag(){
+        console.log('onclick');
+        
+    $.ajax({
+        url: "/ajax.html",
+        success: function( result ) {
+            $( "#ajax-contents" ).append( result );
+            }
+        });
+    }
+    
+</script>
 <body>
     <h1>Hello</h1>
 <div id="ajax-contents"></div>
